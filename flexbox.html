@@ -1,6 +1,27 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+    	body {
+  	background-color: blue;
+	}
+
+  /* If less than 800, turns green. Use min-width for greater than.*/
+  @media only screen and (max-width: 1000px) {
+  body {
+  	background-color: green;
+	}
+  }
+  
+  @media only screen and (max-width: 600px) {
+  .container {
+  	flex-direction: column;
+	}
+  body {
+  	background-color: red;
+  }
+  }
+  
         .container {
             border-style: solid;
             border-width: medium;
