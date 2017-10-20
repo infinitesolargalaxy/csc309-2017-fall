@@ -1,0 +1,18 @@
+/* Defaults to blue background, further styles overwrite this! last style wins! */
+ 
+  body {
+  	background-color: blue;
+	}
+
+  /* If less than 800, turns green. Use min-width for greater than.*/
+  @media only screen and (max-width: 800px) {
+  body {
+  	background-color: green;
+	}
+  }
+  
+  @media only screen and (max-width: 400px) {
+  body {
+  	background-color: red;
+	}
+  }
