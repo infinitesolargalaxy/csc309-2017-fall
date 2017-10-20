@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quiz #5</title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Quiz #5 - jQuery</h1> 
+        <button id="command">
+            Get Data
+        </button>
+        <div id="content">
+        </div>
+    </body>
+    <script>
+    	//function getList() {
+        //var button = document.getElementById("command")
+	$("#command").click(function(e) {
+            e.preventDefault();
+	    $.ajax({
+                    type:'GET',
+                    url: 'http://jsonplaceholder.typicode.com/users',
+                    success: function(data){
+                        // similar to enumerate in python
+			var content = $('#content').text('');
+                
+			$.each(data,function(i,user){
+                            $('<div>')
+                            .text(user.email)
+                            .appendTo(content)
+                        })
+                    }
+                });
+	   
+             
+	});
+	
+    </script>
+</html>
