@@ -1,0 +1,9 @@
+[ 'date',
+  'energy',
+  'impact-e',
+  'lat',
+  'lat-dir',
+  'lon',
+  'lon-dir',
+  'alt',
+  'vel' ]

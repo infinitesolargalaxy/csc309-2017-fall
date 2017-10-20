@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax Test</title>
+    </head>
+    <body>
+        <button id="magic">
+            Click to see the magic
+        </button>
+        <ul class="modify">
+        </ul>
+    </body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+        function getList(){
+                $.ajax({
+                    type:'GET',
+                    url: 'https://api.spacexdata.com/v1/vehicles',
+                    success:function(data){
+                        // similar to enumerate in python
+                        $.each(data,function(i,item){
+                            $('<li>')
+                            .text(item.name)
+                            .appendTo('.modify')
+                        })
+                    }
+                });
+            };
+	  $("button").on("click", getList)
+    </script>
+</html>

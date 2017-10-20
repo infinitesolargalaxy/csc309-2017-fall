@@ -1,0 +1,3 @@
+curl -X POST --header 'Content-Type: application/json' -d '{"name": "morpheus","job":"leader"}' https://reqres.in/api/users >> newuser.txt
+
+{"name":"morpheus","job":"leader","id":"957","createdAt":"2017-09-15T19:37:43.849Z"}
