@@ -1,0 +1,9 @@
+npm -y init
+npm install --save react react-dom
+npm install --save-dev babel-cli babel-preset-react
+echo '{ "presets": ["react"] }' > .babelrc
+./node_modules/.bin/babel app.jsx --presets react -o app.js
+
+Using fetch
+
+npm install fetch
