@@ -1,0 +1,41 @@
+Quiz #9
+
+
+
+For questions 1 and 2: Consider a collection \u201cpurchase\u201d containing documents with the following fields:
+
+
+{
+    _id: ID,
+    name: customer_name,
+    address: customer_address,
+    ph_num: customer_phone_number,
+    amount: bill_amount
+}
+
+1. Say we want to display only the name and address of each customer. Which of the following would you use?
+db.collection(\u201cposts\u201d).find({name: true, address: true})
+db.collection(\u201cposts\u201d).find({}, {_id: false, name: true, address: true, ph_num: false, amount: false})
+db.collection(\u201cposts\u201d).find({}, {_id:false, name: true, address: true}) ->
+None of the above
+2. If we want to print out the total spending of each user using Map-Reduce, with the map function defined as
+
+
+    function() {
+        emit(A, B);
+        }
+      
+
+What is (A, B)?
+(name, amount)
+(_id, amount)
+(this.name, Array.sum(this.amount))
+(this.name, this.amount) ->
+3. Now we want to specify the list of items bought by the customer in each purchase. Each item has an item_code and a price. What kind of a relationship would this be between \u2018purchase\u2019 and \u2018item\u2019?
+One-to-one ->
+One-to-many
+Many-to-many
+None of the above
+4. All documents in a collection must have the same fields.
+True
+False -> 
